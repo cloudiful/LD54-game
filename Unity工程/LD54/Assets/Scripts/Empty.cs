@@ -17,15 +17,20 @@ public class Empty : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(0)&&isMouseIn)
         {
-            if (transform.childCount == 0 && GameManager.instance.selected!=this)
+            if (transform.Find("Floor") == null && GameManager.instance.selected!=this)
             {
                 //Instantiate(GameManager.instance.creations[0], transform);
                 GameManager.instance.selected = gameObject;
+                GameManager.instance.ShowBorder();
             }
             else
             {
                 //Destroy(transform.GetChild(0).gameObject);
             }
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            transform.Find("Border").gameObject.SetActive(false);
         }
     }
 
