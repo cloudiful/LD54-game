@@ -1,3 +1,12 @@
 .DS_Store
 .idea/
 素材/音乐/LD54-soundtrack/Backup/*
+Unity工程/LD54/Library/*
+Unity工程/LD54/ProjectSettings/*
+Unity工程/LD54/Logs/*
+Unity工程/LD54/packages/*
+Unity工程/LD54/Temp/*
+Unity工程/LD54/UserSettings/*
+Unity工程/LD54/obj/*
+Unity工程/LD54/LD54.sln
+Unity工程/LD54/Assembly-CSharp.csproj
