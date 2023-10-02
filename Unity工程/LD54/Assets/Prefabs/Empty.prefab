@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4054792212097301693}
   - component: {fileID: 1055352170}
   - component: {fileID: 1055352171}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Empty
-  m_TagString: Floor
+  m_TagString: Empty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 312175015
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1142f79ac471d46119eab5bce3a95240, type: 3}
   m_Color: {r: 0.122641504, g: 0.105865076, b: 0.105865076, a: 1}
@@ -125,7 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629fabd8134dc7445bd865a03905d35f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMouseIn: 0
 --- !u!1 &7520372586627603305
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2545921718040399332}
   - component: {fileID: 5206181830800250360}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
