@@ -7,16 +7,18 @@ public class HandleSlider : MonoBehaviour
 {
     public AudioMixer Mixer;
     public Slider VolumeSlider;
+    public String ControllTarget;
 
     private void Start()
     {
-        VolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+        VolumeSlider.value = PlayerPrefs.GetFloat(ControllTarget, 0.5f);
     }
 
     public void SetVolume(float sliderValue)
     {
-        Mixer.SetFloat("MusicVolume", (float)Math.Log10(sliderValue) * 20);
-        PlayerPrefs.SetFloat("MusicVolume", sliderValue);
+        Mixer.SetFloat(ControllTarget, (float)Math.Log10(sliderValue) * 40);
+        PlayerPrefs.SetFloat(ControllTarget, sliderValue);
     }
+
     
 }

@@ -29,7 +29,7 @@ public class MainCharacter : MonoBehaviour
         _transform = GetComponent<Transform>();
         
         // update board count info
-        textBoardCount.text = String.Concat("Board remains: ", GameManager.instance.stores[0].ToString());
+        textBoardCount.text = String.Concat("Board remains: ", GameManager.instance.BoardCount.ToString());
         
     }
 
@@ -90,18 +90,31 @@ public class MainCharacter : MonoBehaviour
         // get selected position
         var ObjPos = obj.GetComponent<Transform>().position;
 
-        if (GameManager.instance.stores[0] <= 0)
+        // if has no board left
+        if (GameManager.instance.BoardCount <= 0)
+        {
+            return;
+        }
+
+        // get player position
+        var playerPos = _transform.position;
+        // distance between player with where to put the board
+        var distance = Vector3.Distance(ObjPos, playerPos);
+        
+        // if it is too far then do not allow
+        if (distance >= 1.3)
         {
             return;
         }
         
+        // if where mouse clicdk is empty then add board
         if (obj.name.StartsWith("Empty"))
         {
             // add the floor on where player clicks
             Instantiate(floorTile, ObjPos, Quaternion.identity);
             Destroy(obj);
-            GameManager.instance.stores[0]--;
-            textBoardCount.text = String.Concat("Board remains: ", GameManager.instance.stores[0].ToString());
+            GameManager.instance.BoardCount--;
+            textBoardCount.text = String.Concat("Board remains: ", GameManager.instance.BoardCount.ToString());
         }
     }
     
