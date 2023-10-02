@@ -1,3 +1,5 @@
+using System;
+using TMPro;
 using UnityEngine;
 
 public class MainCharacter : MonoBehaviour
@@ -14,6 +16,9 @@ public class MainCharacter : MonoBehaviour
 
     public GameObject floorTile;
     public GameObject emptyTile;
+    
+    public TextMeshProUGUI textBoardCount;
+
 
     // Start is called before the first frame update
     private void Start()
@@ -22,6 +27,10 @@ public class MainCharacter : MonoBehaviour
         _renderer = GetComponent<SpriteRenderer>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _transform = GetComponent<Transform>();
+        
+        // update board count info
+        textBoardCount.text = String.Concat("Board remains: ", GameManager.instance.stores[0].ToString());
+        
     }
 
     // Update is called once per frame
@@ -92,7 +101,7 @@ public class MainCharacter : MonoBehaviour
             Instantiate(floorTile, ObjPos, Quaternion.identity);
             Destroy(obj);
             GameManager.instance.stores[0]--;
-            _gameManager.UpdateCount();
+            textBoardCount.text = String.Concat("Board remains: ", GameManager.instance.stores[0].ToString());
         }
     }
     
