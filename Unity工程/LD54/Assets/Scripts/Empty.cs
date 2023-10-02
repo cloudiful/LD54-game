@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Empty : MonoBehaviour
 {
     public bool isMouseIn;
+    
+    
+    private GameObject _buttonMain;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +26,7 @@ public class Empty : MonoBehaviour
                 //Instantiate(GameManager.instance.creations[0], transform);
                 GameManager.instance.selected = gameObject;
                 GameManager.instance.ShowBorder();
+                
             }
             else
             {
