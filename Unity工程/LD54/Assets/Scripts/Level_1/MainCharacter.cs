@@ -17,7 +17,7 @@ public class MainCharacter : MonoBehaviour
     public GameObject floorTile;
     public GameObject emptyTile;
     
-    public TextMeshProUGUI textBoardCount;
+    public TextMeshProUGUI textMeshProUGUI;
 
 
     // Start is called before the first frame update
@@ -28,8 +28,7 @@ public class MainCharacter : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _transform = GetComponent<Transform>();
         
-        // update board count info
-        textBoardCount.text = String.Concat("Board remains: ", GameManager.instance.BoardCount.ToString());
+        GameManager.UpdateBoardCountDisplay(textMeshProUGUI);
         
     }
 
@@ -91,7 +90,7 @@ public class MainCharacter : MonoBehaviour
         var ObjPos = obj.GetComponent<Transform>().position;
 
         // if has no board left
-        if (GameManager.instance.BoardCount <= 0)
+        if (GameManager.instance.boardCount <= 0)
         {
             return;
         }
@@ -113,8 +112,8 @@ public class MainCharacter : MonoBehaviour
             // add the floor on where player clicks
             Instantiate(floorTile, ObjPos, Quaternion.identity);
             Destroy(obj);
-            GameManager.instance.BoardCount--;
-            textBoardCount.text = String.Concat("Board remains: ", GameManager.instance.BoardCount.ToString());
+            GameManager.instance.boardCount--;
+            GameManager.UpdateBoardCountDisplay(textMeshProUGUI);
         }
     }
     

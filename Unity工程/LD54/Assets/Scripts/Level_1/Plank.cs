@@ -5,6 +5,7 @@ using UnityEngine;
 public class Plank : MonoBehaviour
 {
     private GameManager _gameManager;
+    public TextMeshProUGUI textMeshProUGUI;
 
     private void Update()
     {
@@ -13,8 +14,8 @@ public class Plank : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        GameManager.instance.BoardCount += 3;
-        _gameManager.UpdateBoardCountDisplay();
+        GameManager.instance.boardCount += 3;
+        GameManager.UpdateBoardCountDisplay(textMeshProUGUI);
         Destroy(gameObject);
     }
 }

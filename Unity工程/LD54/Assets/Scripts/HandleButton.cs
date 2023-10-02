@@ -17,9 +17,14 @@ public class HandleButton : MonoBehaviour
         
     }
 
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("Scenes/Main_Menu");
+    }
+
     public void StartGame()
     {
-        SceneManager.LoadScene("Scenes/Level_1");
+        SceneManager.LoadScene("Scenes/Story");
     }
 
     public void QuitGame()

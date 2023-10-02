@@ -9,10 +9,8 @@ public class GameManager : MonoBehaviour
     
     public static GameManager instance;
 
-    public int BoardCount = 3;
-    
-    public TextMeshProUGUI textBoardCount;
-    
+    public int language = 0;
+    public int boardCount = 3;
     private void Awake()
     {
         if (instance == null)
@@ -25,11 +23,6 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
 
-    }
-
-    private void Start()
-    {
-        Debug.Log(textBoardCount);
     }
 
     public void RestartScene()
@@ -53,11 +46,10 @@ public class GameManager : MonoBehaviour
         return !ReferenceEquals(mouseHit.collider, null) ? mouseHit.collider.name : null;
     }
 
-    public void UpdateBoardCountDisplay()
+    public static void UpdateBoardCountDisplay(TextMeshProUGUI t)
     {
-        Debug.Log(textBoardCount);
         // update board count display
-        textBoardCount.text = String.Concat("Board remains: ", GameManager.instance.BoardCount.ToString());
+        t.text = String.Concat("Board remains: ", GameManager.instance.boardCount.ToString());
     }
     
     
