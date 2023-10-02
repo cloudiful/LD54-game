@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -5,8 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public List<int> stores;
+    
     public static GameManager instance;
+
+    public int BoardCount = 3;
+    
+    public TextMeshProUGUI textBoardCount;
     
     private void Awake()
     {
@@ -20,8 +25,11 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
 
-        stores[0] = 3;
-        
+    }
+
+    private void Start()
+    {
+        Debug.Log(textBoardCount);
     }
 
     public void RestartScene()
@@ -44,5 +52,13 @@ public class GameManager : MonoBehaviour
         var mouseHit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         return !ReferenceEquals(mouseHit.collider, null) ? mouseHit.collider.name : null;
     }
+
+    public void UpdateBoardCountDisplay()
+    {
+        Debug.Log(textBoardCount);
+        // update board count display
+        textBoardCount.text = String.Concat("Board remains: ", GameManager.instance.BoardCount.ToString());
+    }
+    
     
 }
