@@ -21,7 +21,7 @@ public class Story : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var preferedLanguage = GameManager.instance.language;
+        var preferedLanguage = PlayerPrefs.GetInt("language",0);
 
         if (preferedLanguage == 0)
         {

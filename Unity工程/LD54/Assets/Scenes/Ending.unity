@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 2101937635}
   - component: {fileID: 2101937634}
   m_Layer: 0
-  m_Name: "\u518D\u4F1A Mastered"
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
