@@ -35,10 +35,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("Scenes/Menu");
+    }
+    
     public void UpdateCount()
     {
-        var t = textBoardCount.GetComponent<TextMeshProUGUI>();
-        t.text = String.Concat("Boards remain: ", instance.stores[0].ToString());
+        var t = textBoardCount.GetComponent<TextMeshPro>();
+        t.text = "Boards remain: 111";
     }
     
     /// <summary>
