@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Floor
+  - Empty
+  - Plank
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Empty
+  - Character
+  - Item
+  - Block
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Empty
+    uniqueID: 312175015
+    locked: 0
+  - name: Floor
+    uniqueID: 447692899
+    locked: 0
+  - name: Wall
+    uniqueID: 3356285961
+    locked: 0
+  - name: Item
+    uniqueID: 2294470669
+    locked: 0
+  - name: Player
+    uniqueID: 2608431665
+    locked: 0
