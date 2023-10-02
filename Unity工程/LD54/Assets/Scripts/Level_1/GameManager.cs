@@ -1,19 +1,13 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public List<int> stores;
     public static GameManager instance;
     
-    public GameObject textBoardCount;
-
     private void Awake()
     {
         if (instance == null)
@@ -27,7 +21,7 @@ public class GameManager : MonoBehaviour
         }
 
         stores[0] = 3;
-
+        
     }
 
     public void RestartScene()
@@ -37,14 +31,9 @@ public class GameManager : MonoBehaviour
     
     public void BackToMainMenu()
     {
-        SceneManager.LoadScene("Scenes/Menu");
+        SceneManager.LoadScene("Scenes/Main_Menu");
     }
     
-    public void UpdateCount()
-    {
-        var t = textBoardCount.GetComponent<TextMeshPro>();
-        t.text = "Boards remain: 111";
-    }
     
     /// <summary>
     /// This function returns mouse hovering object name

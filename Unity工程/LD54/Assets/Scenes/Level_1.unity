@@ -2075,8 +2075,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -804, y: 523}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -715.8371, y: 505.68225}
+  m_SizeDelta: {x: 376.3258, y: 84.6354}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1367684090
 MonoBehaviour:
@@ -2125,10 +2125,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 55.05
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -3829,7 +3829,7 @@ GameObject:
   - component: {fileID: 2126594236}
   - component: {fileID: 2126594235}
   m_Layer: 0
-  m_Name: "\u91CD\u89C1\u5929\u65E5-\u6500\u722C1-2 Mastered"
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3991,7 +3991,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stores: 03000000
-  textBoardCount: {fileID: 0}
 --- !u!1001 &3001475845418590471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4023,6 +4022,10 @@ PrefabInstance:
       propertyPath: floorTile
       value: 
       objectReference: {fileID: 4602135372284116938, guid: 9820b5c0550895c4eb4a0c29c0fd8264, type: 3}
+    - target: {fileID: 3001475846173278843, guid: 0b40b5382377e4cce9dbd8318741d429, type: 3}
+      propertyPath: textBoardCount
+      value: 
+      objectReference: {fileID: 1367684090}
     - target: {fileID: 3001475846173278844, guid: 0b40b5382377e4cce9dbd8318741d429, type: 3}
       propertyPath: m_RootOrder
       value: 4
