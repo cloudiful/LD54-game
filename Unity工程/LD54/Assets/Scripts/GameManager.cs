@@ -22,16 +22,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void AddFloor()
-    {
-        if (stores[0]>0 && selected!=null && selected.transform.Find("Floor")==null)
-        {
-            Instantiate(creations[0], selected.transform);
-            stores[0]--;
-            UIManager.instance.Refresh();
-        }
-    }
-
+    // public void AddFloor()
+    // {
+    //     if (stores[0]>0 && selected!=null && selected.transform.Find("Floor")==null)
+    //     {
+    //         Instantiate(creations[0], selected.transform);
+    //         stores[0]--;
+    //         UIManager.instance.Refresh();
+    //     }
+    // }
+    //
     public void ShowBorder()
     {
         if (selected!=null)

@@ -25,9 +25,6 @@ public class Player : MonoBehaviour
         RaycastHit2D hit;
         hit=Physics2D.Linecast(transform.position, dst);
 
-        Debug.Log(transform.position+"  "+dst);
-        Debug.DrawLine(transform.position, dst,Color.red);
-
         if (hit.collider.tag=="Floor")
         {
             transform.position = hit.collider.transform.position;
