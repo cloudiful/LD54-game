@@ -1,7 +1,7 @@
 # A game we did at ludum dare 54
 本项目分三部分：Unity工程、素材、文档
 
-this projecr contains: Unity project files, artworks, music project files and documents
+this project contains: Unity project files, artworks, music project files and documents
 
 ### Game Engine: 
 Unity 🙅‍
